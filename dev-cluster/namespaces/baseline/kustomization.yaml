@@ -6,4 +6,4 @@ resources:
 - mem-limit-range.yaml
 - storage-class-quota.yaml
 - object-counts-quota.yaml
-- networkpolicy-deny-other-namespaces.yaml
+- netpol-deny-other-ns.yaml
