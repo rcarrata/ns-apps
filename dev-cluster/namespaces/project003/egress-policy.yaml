@@ -6,7 +6,7 @@ spec:
   egress: # A collection of egress firewall policy rule objects.
   - type: Allow
     to:
-      dnsName: https://docs.openshift.com
+      dnsName: docs.openshift.com
   - type: Deny
     to:
       cidrSelector: 0.0.0.0/0
