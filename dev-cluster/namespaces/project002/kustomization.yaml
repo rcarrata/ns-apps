@@ -7,4 +7,7 @@ bases:
 - ../baseline
 
 resources:
-- project002.yaml
+- namespace.yaml
+- netpol-allow-ingress.yaml
+- netpol-allow-monitoring.yaml
+- rolebinding.yaml
