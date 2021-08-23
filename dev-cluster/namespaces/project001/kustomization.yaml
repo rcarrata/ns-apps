@@ -5,6 +5,7 @@ namespace: project001
 
 bases:
 - ../baseline
+- ../../operators
 
 patchesStrategicMerge:
 - storage-class-quota.yaml
