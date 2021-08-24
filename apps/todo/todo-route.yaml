@@ -14,4 +14,3 @@ spec:
     kind: Service
     name: todo-gitops
     weight: 100
-  path: /todo.html
