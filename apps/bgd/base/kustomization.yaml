@@ -3,3 +3,4 @@ resources:
 - bgd-svc.yaml
 - bgd-deployment.yaml
 - bgd-route.yaml
+- bgd-ns.yaml
