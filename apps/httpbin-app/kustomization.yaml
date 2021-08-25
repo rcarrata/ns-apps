@@ -1,0 +1,5 @@
+namespace: httpbin
+resources:
+- httpbin-svc.yaml
+- httpbin-deploy.yaml
+- httpbin-sa.yaml
