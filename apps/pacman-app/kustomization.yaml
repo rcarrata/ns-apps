@@ -4,6 +4,7 @@ kind: Kustomization
 resources:
 - pacman-service.yaml
 - pacman-deployment.yaml
+- pacman-ns.yaml
 - mongo-service.yaml
 - mongo-pvc.yaml
 - mongo-deployment.yaml
