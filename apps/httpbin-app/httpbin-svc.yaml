@@ -5,8 +5,6 @@ metadata:
   labels:
     app: httpbin
     service: httpbin
-  annotations:
-    argocd.argoproj.io/sync-wave: "1"
 spec:
   ports:
   - name: http
