@@ -1,0 +1,10 @@
+namespace: bouvier
+resources:
+- patty-cm.yaml
+- patty-deployment.yaml
+- patty-route.yaml
+- patty-svc.yaml
+- selma-cm.yaml
+- selma-deployment.yaml
+- selma-route.yaml
+- selma-svc.yaml

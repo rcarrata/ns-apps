@@ -1,0 +1,20 @@
+apiVersion: v1
+data:
+  container-helper.yaml: |+
+    ---
+    response: "Marge"
+    tcpchecks:
+      - name: homer.simpson
+        host: homer-service.simpson
+        port: 8080
+      - name: selma.bouvier
+        host: selma-service.bouvier
+        port: 8080
+      - name: patty.bouvier
+        host: patty-service.bouvier
+        port: 8080
+kind: ConfigMap
+metadata:
+  labels:
+    app: marge
+  name: marge-container-helper
