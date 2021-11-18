@@ -1,9 +1,0 @@
-resources:
-- homer-cm.yaml
-- homer-deployment.yaml
-- homer-route.yaml
-- homer-svc.yaml
-- marge-cm.yaml
-- marge-deployment.yaml
-- marge-route.yaml
-- marge-svc.yaml
