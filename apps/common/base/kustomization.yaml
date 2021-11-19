@@ -1,4 +1,0 @@
-namespace: bouvier
-resources:
-- bouvier-ns.yaml
-- simpson-ns.yaml
