@@ -1,0 +1,12 @@
+---
+response: "Patty"
+tcpchecks:
+  - name: marge.simpson
+    host: marge-service.simpson
+    port: 8080
+  - name: homer.simpson
+    host: homer-service.simpson
+    port: 8080
+  - name: selma.bouvier
+    host: selma-service.bouvier
+    port: 8080
