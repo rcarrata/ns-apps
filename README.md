@@ -1,10 +1,10 @@
-# NSaaS apps
+# From Zero to Hero using OpenShift GitOps - Repository for apps / manifests
 
-Repository for store the k8s resources in a GitOps way
+Repository for store the k8s resources in a GitOps. Not to use directly, use GitOps instead!
 
 * Check the [GitOps Repo](https://github.com/RedHat-EMEA-SSA-Team/ns-gitops/tree/multicluster) to deploy this app with GitOps.
 
-## Index of Demos
+## ## Index of from Zero to GitOps Demos
 
 * [Demo 1A Deploying Sample App with ArgoCD (kustomize)](https://github.com/RedHat-EMEA-SSA-Team/ns-apps/tree/single-app)
 
