@@ -22,3 +22,10 @@ Repository for store the k8s resources in a GitOps way
 
 * [Demo 7 Deploying Multi Clustering with ApplicationSets](https://github.com/RedHat-EMEA-SSA-Team/ns-apps/tree/multicluster)
 
+## Index of OCP Security Demos using GitOps
+
+* [Demo 1 Securing your Microservices with Network Policies using GitOps](https://github.com/RedHat-EMEA-SSA-Team/ns-apps/tree/netpol)
+
+* [Demo 2 Securing your Egress Traffic within your workloads with Egress Firewall using GitOps](https://github.com/RedHat-EMEA-SSA-Team/ns-apps/tree/egressfw)
+
+* [Demo 3 Securing your Egress Traffic within your apps with Egress IPs using GitOps](https://github.com/RedHat-EMEA-SSA-Team/ns-apps/tree/egressip)
