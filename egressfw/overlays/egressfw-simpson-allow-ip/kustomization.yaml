@@ -11,7 +11,7 @@ patches:
       name: default
     patch: |-
       - op: add
-        path: /spec/egress/-
+        path: /spec/egress/0
         value:
           type: Allow
           to:
