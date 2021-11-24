@@ -15,7 +15,7 @@ patches:
         value:
           type: Allow
           to:
-            cidrSelector: 54.172.0.0/16
+            cidrSelector: 54.172.123.0/16
       - op: add
         path: /spec/egress/1
         value:
