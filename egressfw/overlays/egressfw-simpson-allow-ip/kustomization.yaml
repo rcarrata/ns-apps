@@ -15,4 +15,4 @@ patches:
         value:
           type: Allow
           to:
-            cidrSelector: 54.172.173.155/32
+            cidrSelector: 54.172.0.0/16
