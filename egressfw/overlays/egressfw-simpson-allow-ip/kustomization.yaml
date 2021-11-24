@@ -1,0 +1,19 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+- ../base
+- egressfw-simpson-allow-ip.yaml
+
+namespace: simpson
+
+patches:
+  - target:
+      kind: EgressFirewall
+      name: default
+    patch: |-
+      - op: add
+        path: /spec/egress/-
+        value:
+          type: Allow
+          to:
+            cidrSelector: 54.172.173.155/32
