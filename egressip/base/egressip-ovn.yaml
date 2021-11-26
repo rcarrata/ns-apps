@@ -5,6 +5,5 @@ metadata:
 spec:
   egressIPs:
   - EGRESSIP1
-  - EGRESSIP2
   namespaceSelector:
     matchLabels:

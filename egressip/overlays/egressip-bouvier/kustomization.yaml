@@ -18,7 +18,7 @@ patches:
         path: /spec/egressIPs/0
         value:
           192.168.126.100
-      - op: replace
-        path: /spec/egressIPs/1
-        value:
-          192.168.126.101
+#      - op: replace
+#        path: /spec/egressIPs/1
+#        value:
+#          192.168.126.101
