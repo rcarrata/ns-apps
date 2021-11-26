@@ -1,0 +1,24 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+- ../../base
+
+namespace: bouvier
+
+patches:
+  - target:
+      kind: EgressIP
+      name: egressip-demo
+    patch: |-
+      - op: add
+        path: /spec/namespaceSelector/matchLabels
+        value:
+          house: bouvier
+      - op: replace
+        path: /spec/egressIPs/0
+        value:
+          192.168.126.100
+      - op: replace
+        path: /spec/egressIPs/1
+        value:
+          192.168.126.101

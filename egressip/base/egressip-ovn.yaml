@@ -1,0 +1,10 @@
+apiVersion: k8s.ovn.org/v1
+kind: EgressIP
+metadata:
+  name: egressip-demo
+spec:
+  egressIPs:
+  - EGRESSIP1
+  - EGRESSIP2
+  namespaceSelector:
+    matchLabels:
