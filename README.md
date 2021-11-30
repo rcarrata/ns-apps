@@ -33,7 +33,7 @@ Repository for store the k8s resources in a GitOps. Not to use directly, use Git
 
 * [Demo 5 - Securing Ingress Traffic with Ingress Controllers and NodeSelectors using GitOps](https://github.com/RedHat-EMEA-SSA-Team/ns-apps/tree/ingress)
 
-* [Demo 6 - Implementing Network Security Zones in OpenShift](https://github.com/RedHat-EMEA-SSA-Team/ns-gitops/tree/seczones)
+* [Demo 6 - Implementing Network Security Zones in OpenShift](https://github.com/RedHat-EMEA-SSA-Team/ns-apps/tree/seczones)
 
 * [Demo 7 - Securing communication between OpenShift Clusters with Submariner in Advanced Cluster Management for Kubernetes](https://github.com/RedHat-EMEA-SSA-Team/ns-apps/tree/submariner)
 
