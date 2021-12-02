@@ -1,0 +1,20 @@
+apiVersion: operator.openshift.io/v1
+kind: IngressController
+metadata:
+  name: bouvier-ingress
+  namespace: openshift-ingress-operator
+spec:
+  endpointPublishingStrategy:
+    type: HostNetwork 
+  domain: bouvierapps.ocp.my.lab
+  replicas: 2
+  nodePlacement:
+    nodeSelector:
+      matchLabels:
+        node-role.kubernetes.io/bouvier-ingress: ""
+  namespaceSelector:
+    matchExpressions:
+      - key: house
+        operator: In
+        values:
+        - bouvier
