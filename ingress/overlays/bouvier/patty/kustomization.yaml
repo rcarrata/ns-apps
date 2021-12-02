@@ -1,16 +1,46 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
-- ../../base
-- dedicatedroute.yaml
+- ../../../base
 
 
-namespace: bouvier
-namePrefix: patty-
+patches:
+-  target:
+    version: v1
+    group: operator.openshift.io
+    kind: IngressController
+    name: ingresscontroller
+   patch: |-
+    - op: replace
+      path: /spec/domain
+      value: bouvierapps.ocp.my.lab
+    - op: replace
+      path: /spec/nodePlacement/nodeSelector/matchLabels
+      value: 'node-role.kubernetes.io/bouvier-ingress: ""'
+    - op: replace
+      path: /spec/namespaceSelector/matchExpressions/0/values
+      value: bouvier
 
-commonLabels:
-  app: patty
 
-
-
-
+patches:
+-  target:
+    version: v1
+    group: route.openshift.io
+    kind: Route
+    name: route
+   patch: |-
+    - op: replace
+      path: /spec/host
+      value: patty-route-bouvier.bouvierapps.ocp.my.lab
+    - op: replace
+      path: /spec/to/name
+      value: patty-service
+    - op: replace
+      path: /metadata/name
+      value: patty-route-bouvieringress
+    - op: add
+      path: /metadata/namespace
+      value: bouvier
+    - op: replace
+      path: /metadata/labels/app
+      value: patty

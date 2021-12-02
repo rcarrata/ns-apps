@@ -1,20 +1,20 @@
 apiVersion: operator.openshift.io/v1
 kind: IngressController
 metadata:
-  name: simpson-ingress
+  name: ingresscontroller
   namespace: openshift-ingress-operator
 spec:
   endpointPublishingStrategy:
     type: HostNetwork 
-  domain: simpsonapps.ocp.my.lab
+  domain: domain
   replicas: 2
   nodePlacement:
     nodeSelector:
       matchLabels:
-        node-role.kubernetes.io/simpson-ingress: ""
+        node-role.kubernetes.io/bouvier-ingress: ""
   namespaceSelector:
     matchExpressions:
       - key: house
         operator: In
         values:
-        - simpson
+        - bouvier
