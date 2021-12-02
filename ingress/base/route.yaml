@@ -4,7 +4,6 @@ metadata:
   name: route
   labels:
     app: name
-    app.kubernetes.io/instance: name
 spec:
   host: hostname
   port:
