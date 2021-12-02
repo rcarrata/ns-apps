@@ -10,6 +10,20 @@ commonLabels:
   app: selma
 
 patches:
+
+-  target:
+    version: v1
+    group: apps
+    kind: Deployment
+    name: deployment
+   patch: |-
+    - op: add
+      path: /spec/template/metadata/labels/zone
+      value: application
+    - op: add
+      path: /spec/template/spec/nodeSelector/'node-role.kubernetes.io/application-worker'
+      value: ""
+
 -  target:
     version: v1
     group: route.openshift.io

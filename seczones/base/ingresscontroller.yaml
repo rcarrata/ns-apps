@@ -1,0 +1,20 @@
+apiVersion: operator.openshift.io/v1
+kind: IngressController
+metadata:
+  name: ingresscontroller
+  namespace: openshift-ingress-operator
+spec:
+  endpointPublishingStrategy:
+    type: HostNetwork 
+  domain: domain
+  replicas: 2
+  nodePlacement:
+    nodeSelector:
+      matchLabels:
+        node-role.kubernetes.io/frontend-worker: ""
+  namespaceSelector:
+    matchExpressions:
+      - key: zone
+        operator: In
+        values:
+        - bouvier

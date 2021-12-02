@@ -10,6 +10,23 @@ commonLabels:
   app: patty
 
 patches:
+
+-  target:
+    version: v1
+    group: apps
+    kind: Deployment
+    name: deployment
+   patch: |-
+    - op: add
+      path: /spec/template/metadata/labels/zone
+      value: frontend
+    - op: add
+      path: /spec/template/spec/nodeSelector/'node-role.kubernetes.io/frontend-worker'
+      value: ""
+
+
+
+
 -  target:
     version: v1
     group: route.openshift.io

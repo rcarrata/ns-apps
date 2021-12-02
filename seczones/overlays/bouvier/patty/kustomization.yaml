@@ -1,0 +1,49 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+- ../../../base
+
+
+patches:
+-  target:
+    version: v1
+    group: operator.openshift.io
+    kind: IngressController
+    name: ingresscontroller
+   patch: |-
+    - op: replace
+      path: /spec/domain
+      value: frontend.ocp.my.lab
+    - op: replace
+      path: /spec/nodePlacement/nodeSelector/matchLabels
+      value: 'node-role.kubernetes.io/frontend-worker: ""'
+    - op: replace
+      path: /spec/routeSelector/matchExpressions/0/values
+      value: frontend
+
+
+patches:
+-  target:
+    version: v1
+    group: route.openshift.io
+    kind: Route
+    name: route
+   patch: |-
+    - op: replace
+      path: /spec/host
+      value: patty-route-bouvier.frontend.ocp.my.lab
+    - op: replace
+      path: /spec/to/name
+      value: patty-service
+    - op: replace
+      path: /metadata/name
+      value: patty-route-frontend
+    - op: add
+      path: /metadata/namespace
+      value: bouvier
+    - op: replace
+      path: /metadata/labels/app
+      value: patty
+    - op: replace
+      path: /metadata/labels/zone
+      value: frontend
