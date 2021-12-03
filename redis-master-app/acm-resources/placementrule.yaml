@@ -9,5 +9,5 @@ metadata:
 spec:
   clusterSelector:
     matchLabels:
-      name: aws-sub1
+      name: aws-subs1
 
