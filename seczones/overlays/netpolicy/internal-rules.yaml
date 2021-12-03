@@ -4,7 +4,8 @@ metadata:
   name: allow-internal
   namespace: simpson
 spec:
-  podSelector: null
+  podSelector:
+    matchLabels:
   ingress:
     - from:
       - podSelector: {}
