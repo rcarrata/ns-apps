@@ -1,0 +1,47 @@
+kind: NetworkPolicy
+apiVersion: networking.k8s.io/v1
+metadata:
+  name: deny-all
+  namespace: bouvier
+spec:
+  podSelector: {}
+  policyTypes:
+    - Ingress
+    - Egress
+
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: allow-frontend-to-application
+  namespace: bouvier
+spec:
+  podSelector:
+    matchLabels:
+      zone: application
+  ingress:
+    - from:
+        - podSelector:
+            matchLabels:
+              zone: frontend
+          namespaceSelector: {}
+
+---
+
+
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: allow-from-openshift-ingress
+  namespace: bouvier
+spec:
+  podSelector:
+    matchLabels:
+      zone: frontend
+  ingress:
+  - from:
+    - namespaceSelector:
+        matchLabels:
+          network.openshift.io/policy-group: ingress
+  policyTypes:
+  - Ingress

@@ -1,0 +1,19 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: deployment
+spec:
+  template:
+    metadata:
+      labels:
+        zone: application
+    spec:
+      nodeSelector:
+        node-role.kubernetes.io/application-worker: ""
+      tolerations:
+      - key: "zone"
+        operator: "Equal"
+        value: "application"
+        effect: "NoSchedule"
+
+

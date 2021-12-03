@@ -8,6 +8,7 @@ namePrefix: homer-
 
 commonLabels:
   app: homer
+  zone: internal
 
 patches:
 -  target:

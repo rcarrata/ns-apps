@@ -8,6 +8,7 @@ namePrefix: marge-
 
 commonLabels:
   app: marge
+  zone: internal
 
 patches:
 -  target:
