@@ -3,9 +3,10 @@ kind: NetworkPolicy
 metadata:
   name: allow-internal
   namespace: simpson
+  annotations:
+    argocd.argoproj.io/sync-options: Validate=false
 spec:
-  podSelector:
-    matchLabels:
+  podSelector: null
   ingress:
     - from:
       - podSelector: {}
