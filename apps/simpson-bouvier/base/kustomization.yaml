@@ -2,7 +2,7 @@ namespace: bouvier
 resources:
 - deployment.yaml
 - service.yaml
-- route.yaml
+#- route.yaml
 - gitops-rbac.yaml
 
 commonAnnotations:

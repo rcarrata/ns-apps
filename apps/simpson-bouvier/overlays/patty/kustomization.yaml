@@ -17,15 +17,15 @@ patchesStrategicMerge:
 patches:
 
 
--  target:
-    version: v1
-    group: route.openshift.io
-    kind: Route
-    name: route
-   patch: |-
-    - op: replace
-      path: /spec/to/name
-      value: patty-service
+#-  target:
+#    version: v1
+#    group: route.openshift.io
+#    kind: Route
+#    name: route
+#   patch: |-
+#    - op: replace
+#      path: /spec/to/name
+#      value: patty-service
 
 configMapGenerator:
 - name: container-helper-yaml

@@ -10,16 +10,16 @@ commonLabels:
   app: marge
   zone: internal
 
-patches:
--  target:
-    version: v1
-    group: route.openshift.io
-    kind: Route
-    name: route
-   patch: |-
-    - op: replace
-      path: /spec/to/name
-      value: marge-service
+#patches:
+#-  target:
+#    version: v1
+#    group: route.openshift.io
+#    kind: Route
+#    name: route
+#   patch: |-
+#    - op: replace
+#      path: /spec/to/name
+#      value: marge-service
 
 configMapGenerator:
 - name: container-helper-yaml
