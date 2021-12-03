@@ -29,19 +29,19 @@ spec:
 ---
 
 
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: allow-from-openshift-ingress
-  namespace: bouvier
-spec:
-  podSelector:
-    matchLabels:
-      zone: frontend
-  ingress:
-  - from:
-    - namespaceSelector:
-        matchLabels:
-          network.openshift.io/policy-group: ingress
-  policyTypes:
-  - Ingress
+#apiVersion: networking.k8s.io/v1
+#kind: NetworkPolicy
+#metadata:
+#  name: allow-from-openshift-ingress
+#  namespace: bouvier
+#spec:
+#  podSelector:
+#    matchLabels:
+#      zone: frontend
+#  ingress:
+#  - from:
+#    - namespaceSelector:
+#        matchLabels:
+#          network.openshift.io/policy-group: ingress
+#  policyTypes:
+#  - Ingress
