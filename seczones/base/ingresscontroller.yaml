@@ -4,11 +4,6 @@ metadata:
   name: ingresscontroller
   namespace: openshift-ingress-operator
 spec:
-  tolerations:
-  - key: "zone"
-    operator: "Equal"
-    value: "frontend"
-    effect: "NoSchedule"
   endpointPublishingStrategy:
     type: HostNetwork 
   domain: domain

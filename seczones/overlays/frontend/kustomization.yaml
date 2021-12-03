@@ -5,6 +5,25 @@ resources:
 
 
 patches:
+-  target:
+    version: v1
+    group: operator.openshift.io
+    kind: IngressController
+    name: ingresscontroller
+   patch: |-
+    - op: replace
+      path: /spec/domain
+      value: frontend.ocp.my.lab
+    - op: replace
+      path: /spec/routeSelector/matchExpressions/0/values
+      value: frontend
+    - op: replace
+      path: /spec/tolerations/0/value
+      value: frontend
+    - op: replace
+      path: /spec/nodePlacement/nodeSelector/matchLabels
+      value: 'node-role.kubernetes.io/frontend-worker: ""'
+
 
 patches:
 -  target:
