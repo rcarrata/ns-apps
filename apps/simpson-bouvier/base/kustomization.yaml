@@ -1,9 +1,0 @@
-namespace: bouvier
-resources:
-- deployment.yaml
-- service.yaml
-- route.yaml
-- gitops-rbac.yaml
-
-commonAnnotations:
-    argocd.argoproj.io/sync-options: SkipDryRunOnMissingResource=true

@@ -1,0 +1,13 @@
+---
+apiVersion: apps.open-cluster-management.io/v1
+kind: PlacementRule
+metadata:
+  namespace: guestbook
+  name: redis-slave-app-placement-1
+  labels:
+    app: redis-slave-app
+spec:
+  clusterSelector:
+    matchLabels:
+      name: aws-sub2
+

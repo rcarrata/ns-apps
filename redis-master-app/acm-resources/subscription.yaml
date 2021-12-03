@@ -1,0 +1,17 @@
+---
+apiVersion: apps.open-cluster-management.io/v1
+kind: Subscription
+metadata:
+  namespace: guestbook
+  name: redis-master-app-subscription-1
+  annotations:
+    apps.open-cluster-management.io/git-branch: submariner
+    apps.open-cluster-management.io/git-path: redis-master-app/redis-master
+  labels:
+    app: redis-master-app
+spec:
+  channel: guestbook/redis-slave-app-latest
+  placement:
+    placementRef:
+      name: redis-master-app-placement-1
+      kind: PlacementRule

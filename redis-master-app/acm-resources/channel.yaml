@@ -1,0 +1,9 @@
+---
+apiVersion: apps.open-cluster-management.io/v1
+kind: Channel
+metadata:
+  name: redis-master-app-latest
+  namespace: guestbook
+spec:
+  type: GitHub
+  pathname: https://github.com/RedHat-EMEA-SSA-Team/ns-gitops
