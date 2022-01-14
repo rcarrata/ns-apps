@@ -38,3 +38,5 @@ Repository for store the k8s resources in a GitOps. Not to use directly, use Git
 * [Demo 7 - Securing communication between OpenShift Clusters with Submariner in Advanced Cluster Management for Kubernetes](https://github.com/RedHat-EMEA-SSA-Team/ns-apps/tree/submariner)
 
 * [Demo 8 - Managing Compliance with Compliance Operator and Compliance in Advanced Cluster Security for Kubernetes](https://github.com/RedHat-EMEA-SSA-Team/ns-apps/tree/compliance)
+
+
