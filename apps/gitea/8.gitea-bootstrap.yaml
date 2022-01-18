@@ -2,7 +2,7 @@ apiVersion: batch/v1
 kind: Job
 metadata:
   name: "gitea-bootstrap"
-  namespace: scm
+  namespace: gitea
   annotations:
     argocd.argoproj.io/sync-wave: "8"
     argocd.argoproj.io/hook: PostSync

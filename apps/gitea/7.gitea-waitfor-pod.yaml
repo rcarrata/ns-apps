@@ -2,7 +2,7 @@ apiVersion: v1
 kind: Pod
 metadata:
   name: "gitea-waitfor-pod"
-  namespace: scm
+  namespace: gitea
   annotations:
     argocd.argoproj.io/sync-wave: "7"
     argocd.argoproj.io/hook: PostSync

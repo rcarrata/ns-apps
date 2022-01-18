@@ -28,4 +28,4 @@ roleRef:
 subjects:
   - kind: ServiceAccount
     name: gitea-cli-job-sa
-    namespace: scm
+    namespace: gitea

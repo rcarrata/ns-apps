@@ -4,7 +4,7 @@ metadata:
   annotations:
     argocd.argoproj.io/sync-wave: "5"
   name: gitea-crd-wait-job
-  namespace: scm
+  namespace: gitea
 spec:
   template:
     spec:
@@ -14,11 +14,11 @@ spec:
             - /bin/bash
             - -c
             - |
-              export HOME=/tmp/scm
+              export HOME=/tmp/gitea
               echo ""
               echo -n "Waiting for the Gitea CRD to become available"
               sleep $SLEEP
-              until oc wait --for condition=established --timeout=60s crd/giteas.gpte.opentlc.com -n scm 2>&1 >/dev/null
+              until oc wait --for condition=established --timeout=60s crd/giteas.gpte.opentlc.com -n gitea 2>&1 >/dev/null
               do
                 echo -n "."
                 sleep $SLEEP
